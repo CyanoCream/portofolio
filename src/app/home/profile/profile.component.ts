@@ -25,7 +25,7 @@ export class ProfileComponent implements OnInit, OnChanges  {
     {
       title: 'SUMMARY:', data: '<p>"I am a dedicated and motivated software engineer, specializing in backend development. I graduated from Semarang University in 2021 with a degree in Information Systems.'
       + '<BR><BR> My passion for IT and programming has been a driving force in my career, leading me to excel in building robust REST APIs. I thrive on challenges and am enthusiastic about expanding my skillset, particularly in the field of machine learning. I am committed to continuous learning and growth, and I look forward to contributing my expertise to innovative projects and teams." <BR>'
-       + '<BR>  I am looking for opportunities to be able to contribute further in the industrial world in the IT Support section to be able to apply my experience and interests. Let\'s Connect on LinkedIn or contact me at (anangeko9@gmail.com)</p>',
+       + '<BR>  I am looking for opportunities to be able to contribute further in the industrial world in the IT Programming section to be able to apply my experience and interests. Let\'s Connect on LinkedIn or contact me at (anangeko9@gmail.com)</p>',
       contact: 'CONTACT', sp: 'SOCIAL PROFILES'
     };
 
