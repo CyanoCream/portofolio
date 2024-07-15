@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  background-color: #1f1d2b;
+}
+
+.landingpage {
+  margin: 0;
+  padding: 0 40px;
+  position: relative;
+  overflow-y: visible;
+  overflow-x: visible;
+  background-color: #1f1d2b;
+}
+.landingpage::before {
+  content: "";
+  position: absolute;
+  width: 123px;
+  height: 123px;
+  left: 60%;
+  top: 138px;
+  filter: blur(90px);
+  background-color: #fb37ff;
+}
+.landingpage::after {
+  content: "";
+  position: absolute;
+  width: 123px;
+  height: 123px;
+  left: 80%;
+  top: 550px;
+  filter: blur(80px);
+  background-color: #18b2de;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+@media (max-width: 768px) {
+  .landingpage {
+    margin: 0;
+    padding: 0 40px;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #1f1d2b;
+  }
+}
+@media screen and (max-width: 600px) {
+  .landingpage {
+    padding: 0 20px;
+  }
+}

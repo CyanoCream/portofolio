@@ -1,42 +1,47 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { Routes, RouterModule} from '@angular/router';
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './home/header/header/header.component';
-import { HomeComponent} from './home/home/home.component';
-import { HeadlineComponent} from './home/headline/headline.component';
-import { ProfileComponent } from './home/profile/profile.component';
-import { ResumeComponent } from './home/resume/resume.component';
-import { InternshipComponent } from './home/internship/internship.component';
-import { SkillsComponent } from './home/skills/skills.component';
-import { AwardsComponent } from './home/awards/awards.component';
+import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ProjectComponent } from './home/project/project.component'
+import { HttpClientModule } from '@angular/common/http';
 
-const routes: Routes = [
-  { path: '', component: HomeComponent }
-];
+import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { HeadlineComponent } from './headline/headline.component';
+import { ContactsComponent } from './contacts/contacts.component';
+import { SkillsComponent } from './skills/skills.component';
+import { ExperienceComponent } from './experience/experience.component';
+import { CertificationComponent } from './certification/certification.component';
+import { FooterComponent } from './footer/footer.component';
+
+import { PhonePipe } from './shared/pipes/phone.pipe';
+import { ExpirationPipe } from './shared/pipes/expiration.pipe';
+
+import { BusyIndicatorDirective } from './shared/directives/busy-indicator.directive';
+
+import { register } from 'swiper/element/bundle';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    HeaderComponent,
     HeadlineComponent,
-    ProfileComponent,
-    ResumeComponent,
+    ContactsComponent,
     SkillsComponent,
-    AwardsComponent,
-    InternshipComponent,
-    ProjectComponent,
+    ExperienceComponent,
+    CertificationComponent,
+    FooterComponent,
+    PhonePipe,
+    BusyIndicatorDirective,
+    NavbarComponent,
+    ExpirationPipe,
   ],
-  imports: [
-    BrowserModule,
-    RouterModule.forRoot(routes),
-    NgbModule,
-    // NgbModule.forRoot(),
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, NgbModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {
+  constructor() {
+    register();
+  }
+}

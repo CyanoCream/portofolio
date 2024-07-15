@@ -1,0 +1,17 @@
+<section id="skill">
+  <div class="skills">
+    <p class="skills-boldtext">Skills</p>
+    <p class="skills-slimtext">Main programming languages and technologies I have worked with</p>
+
+    <div class="skills-items">
+
+      <div class="itemwrapper" *ngFor="let skill of highlightedSkills">
+        <div class="skills-items-item">
+          <img src={{skill.imageUrl}} />
+        </div>
+        <p>{{skill.name}}</p>
+      </div>
+
+    </div>
+  </div>
+</section>

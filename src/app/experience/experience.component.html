@@ -1,0 +1,83 @@
+<section id="experience">
+  <div class="experience">
+    <p class="experience-boldtext">Experience</p>
+    <p class="experience-slimtext">My work history</p>
+    <div class="wrapper">
+
+      <div class="content">
+        <div class="bg-shape">
+        </div>
+
+        <div class="exprns-slider">
+          <button class="prev">
+            <span class="icon">
+              <svg class="icon icon-arrow-right">
+                <use xlink:href="#icon-arrow-left"></use>
+              </svg>
+            </span>
+          </button>
+          <button class="next">
+            <span class="icon">
+              <svg class="icon icon-arrow-right">
+                <use xlink:href="#icon-arrow-right"></use>
+              </svg>
+            </span>
+          </button>
+
+          <div class="exprns-slider__wrp swiper-wrapper">
+
+            <div class="exprns-slider__item swiper-slide" data-target="img1" *ngFor="let exp of experience; index as i">
+
+              <div class="exprns-img__item" id="exprns-company-logo">
+                <img [src]=exp.companyLogoImageUrl>
+              </div>
+
+              <div class="exprns-slider__card">
+                <img src="../../assets/images/backgrounds/swiper-bg.webp" class="exprns-slider__cover">
+                <div class="exprns-slider__content">
+                  <h1 class="exprns-slider__title">
+                    {{exp.company | uppercase }}
+                  </h1>
+                  <h1 class="exprns-slider__subtitle">
+                    {{exp.title}}
+                  </h1>
+                  <div class="exprns-slider__details">
+                    <div class="exprns-slider__details-location">
+                      <span>{{exp.location}}</span>
+                    </div>
+                    <span>{{exp.startDate | date: 'MMM yyyy'}} - {{exp.endDate!=null ? (exp.endDate | date: 'MMM yyyy')
+                      : "Present"}}</span>
+                  </div>
+                  <div class="exprns-slider__chip-group">
+                    <div class="exprns-slider__chip" *ngFor="let skill of exp.skills">{{skill.name}}</div>
+                  </div>
+                  <div class="exprns-slider__tasks">
+                    <div class="exprns-slider__tasks-caption">Task Performed:</div>
+                    <ul class="exprns-slider__tasks-list">
+                      <li *ngFor="let task of exp.taskPerformed">{{task}}</li>
+                    </ul>
+                    <br />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <svg class="hidden" hidden>
+      <symbol id="icon-arrow-left" viewBox="0 0 32 32">
+        <path
+          d="M0.704 17.696l9.856 9.856c0.896 0.896 2.432 0.896 3.328 0s0.896-2.432 0-3.328l-5.792-5.856h21.568c1.312 0 2.368-1.056 2.368-2.368s-1.056-2.368-2.368-2.368h-21.568l5.824-5.824c0.896-0.896 0.896-2.432 0-3.328-0.48-0.48-1.088-0.704-1.696-0.704s-1.216 0.224-1.696 0.704l-9.824 9.824c-0.448 0.448-0.704 1.056-0.704 1.696s0.224 1.248 0.704 1.696z">
+        </path>
+      </symbol>
+      <symbol id="icon-arrow-right" viewBox="0 0 32 32">
+        <path
+          d="M31.296 14.336l-9.888-9.888c-0.896-0.896-2.432-0.896-3.328 0s-0.896 2.432 0 3.328l5.824 5.856h-21.536c-1.312 0-2.368 1.056-2.368 2.368s1.056 2.368 2.368 2.368h21.568l-5.856 5.824c-0.896 0.896-0.896 2.432 0 3.328 0.48 0.48 1.088 0.704 1.696 0.704s1.216-0.224 1.696-0.704l9.824-9.824c0.448-0.448 0.704-1.056 0.704-1.696s-0.224-1.248-0.704-1.664z">
+        </path>
+      </symbol>
+    </svg>
+  </div>
+</section>
