@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   isLoading: boolean = false;
   isLongLoading: boolean = false;
   public highlightedSkills!: Skill[];
+  public highlightedResume!: Skill[];
   public experience!: ExperienceWithSkills[];
   public certification!: Certification[];
   public contacts!: Map<string, Contact>;

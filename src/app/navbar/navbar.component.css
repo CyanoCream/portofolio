@@ -1,4 +1,8 @@
 .navbar {
+  position: fixed;
+  top: 0;
+  width: 95%;
+  z-index: 1000; /* Pastikan navbar tetap di atas elemen lain */
   background-color: transparent;
   overflow: hidden;
   margin: 0 40px;

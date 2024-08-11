@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { HeadlineComponent } from './headline/headline.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { SkillsComponent } from './skills/skills.component';
+import { ResumeComponent } from './resume/resume.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { CertificationComponent } from './certification/certification.component';
 import { FooterComponent } from './footer/footer.component';
@@ -28,6 +29,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     HeadlineComponent,
     ContactsComponent,
     SkillsComponent,
+    ResumeComponent,
     ExperienceComponent,
     CertificationComponent,
     FooterComponent,
