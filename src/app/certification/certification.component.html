@@ -39,15 +39,20 @@
 
     <div class="cert-items">
       <div class="cert-items__item" *ngFor="let cert of certification">
-        <a href={{cert.verificationUrl}} target="_blank">
-          <img class="cert-items__item-img" [src]=cert.badgeImageUrl alt={{cert.name}}>
+        <a [href]="cert.verificationUrl" target="_blank">
+          <img
+            [ngClass]="cert.isCertificate ? 'iscertificate' : 'cert-items__item-img'"
+            [src]="cert.badgeImageUrl"
+            [alt]="cert.name"
+          >
         </a>
         <div class="cert-items__item-title">
-          <p>{{cert.name}}</p>
+          <p>{{ cert.name }}</p>
         </div>
         <p class="cert-items__item-date">{{ cert.expirationDate | expiration }}</p>
       </div>
     </div>
+
 
   </div>
 </section>

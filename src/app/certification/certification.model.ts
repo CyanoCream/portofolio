@@ -7,6 +7,7 @@ export class Certification {
     public verificationUrl: URL,
     public badgeImageUrl: URL,
     public issueDate: Date,
-    public expirationDate?: Date
+    public expirationDate?: Date,
+    public isCertificate?: boolean,
   ) {}
 }

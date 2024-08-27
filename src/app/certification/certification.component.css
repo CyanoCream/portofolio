@@ -164,3 +164,23 @@
     justify-content: space-around;
   }
 }
+.iscertificate {
+  object-fit: cover;
+  flex-shrink: 0;
+  height: 200px;
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+  filter: drop-shadow(0 0 16px rgba(199, 114, 255, 0.4));
+  -webkit-user-drag: none;
+  -moz-user-drag: none;
+  -ms-user-drag: none;
+  user-select: none;
+
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
