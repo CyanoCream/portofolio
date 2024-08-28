@@ -37,6 +37,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     BusyIndicatorDirective,
     NavbarComponent,
     ExpirationPipe,
+    ResumeComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, NgbModule],
   providers: [],

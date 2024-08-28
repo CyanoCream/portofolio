@@ -1,17 +1,32 @@
+<!-- First Section -->
 <section id="resume">
   <div class="resume">
-    <p class="resume-boldtext">Resume</p>
-    <p class="resume-slimtext">Main programming languages and technologies I have worked with</p>
-
-    <div class="resume-items">
-
-      <div class="itemwrapper" *ngFor="let resume of highlightedResume">
-        <div class="skills-items-item">
-          <img src={{resume.imageUrl}} />
+    <h2 class="resume-boldtext">Internship & Volunteer</h2>
+    <div class="timeline">
+      <div class="timeline-item" *ngFor="let item of timelineItems">
+        <div class="timeline-content">
+          <h3>{{item.title}}</h3>
+          <p class="date">{{item.date}}</p>
+          <p>{{item.description}}</p>
         </div>
-        <p>{{resume.name}}</p>
+        <div class="timeline-dot"></div>
       </div>
-
+    </div>
+  </div>
+</section>
+<!-- Second Section -->
+<section id="resume-2">
+  <div class="resume">
+    <h2 class="resume-boldtext">Education</h2>
+    <div class="timeline">
+      <div class="timeline-item" *ngFor="let item of educationItems">
+        <div class="timeline-content">
+          <h3>{{item.title}}</h3>
+          <p class="date">{{item.date}}</p>
+          <p>{{item.description}}</p>
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
     </div>
   </div>
 </section>

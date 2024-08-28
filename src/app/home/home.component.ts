@@ -11,6 +11,8 @@ import {
 import { ExperienceService } from '../experience/experience.service';
 import { Skill } from '../skills/skill.model';
 import { SkillsService } from '../skills/skills.service';
+import { ResumeService } from '../resume/resume.service';
+import {Resume} from "../resume/resume.model";
 
 @Component({
   selector: 'app-home',
@@ -21,7 +23,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   isLoading: boolean = false;
   isLongLoading: boolean = false;
   public highlightedSkills!: Skill[];
-  public highlightedResume!: Skill[];
+  public highlightedResume:Resume[] = [];
   public experience!: ExperienceWithSkills[];
   public certification!: Certification[];
   public contacts!: Map<string, Contact>;
@@ -30,7 +32,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
     private certificationService: CertificationService,
     private contactsService: ContactsService,
     private experienceService: ExperienceService,
-    private skillsService: SkillsService
+    private skillsService: SkillsService,
+    private resumeService: ResumeService
   ) {}
 
   ngOnInit(): void {
