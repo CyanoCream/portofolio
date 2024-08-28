@@ -21,6 +21,7 @@ import { BusyIndicatorDirective } from './shared/directives/busy-indicator.direc
 
 import { register } from 'swiper/element/bundle';
 import { NavbarComponent } from './navbar/navbar.component';
+import {ProjectComponent} from "./project/project.component";
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     NavbarComponent,
     ExpirationPipe,
     ResumeComponent,
+    ProjectComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, NgbModule],
   providers: [],
